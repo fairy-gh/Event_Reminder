@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="colorPalette">
+        <item>@color/blue</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+        <item>@color/red</item>
+    </integer-array>
+
+    <string-array name="occasion">
+        <item>@string/birthday</item>
+        <item>@string/instalment</item>
+        <item>@string/anniversary</item>
+        <item>@string/gym</item>
+        <item>@string/meeting</item>
+        <item>@string/drug</item>
+    </string-array>
+</resources>

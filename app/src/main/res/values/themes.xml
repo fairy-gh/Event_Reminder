@@ -1,0 +1,153 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Event_Reminder" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/deep_blue</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/navy_blue</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/navy_blue</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="tamrin5Buttons" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width" tools:ignore="DuplicateDefinition">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="item_dateText" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/_2sdp</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="event_creator_buttonGroup" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/event_creator_layout_views_selector</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator" tools:targetApi="lollipop">@null</item>
+    </style>
+
+    <style name="event_creator_editText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="android:layout_gravity">center_vertical|end</item>
+        <item name="android:background">@drawable/bg_rectangle_gray_light</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:layout_marginTop">@dimen/_6sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_14sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginRight">@dimen/_14sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_20sdp</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+        <item name="maxLines">1</item>
+    </style>
+
+    <style name="event_creator_textView" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="android:layout_gravity">center_vertical|end</item>
+        <item name="android:background">@drawable/bg_rectangle_gray_light</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginRight">@dimen/_16sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_20sdp</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+    </style>
+
+    <style name="event_creator_fontIcon" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:layout_margin">@dimen/_10sdp</item>
+    </style>
+
+    <style name="dialog_occasions_radioButtons">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableRight">@drawable/radio_button_selector</item>
+        <item name="android:drawablePadding">@dimen/_14sdp</item>
+        <item name="android:paddingRight">@dimen/_26sdp</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="android:background">@drawable/simple_view_selector</item>
+    </style>
+
+    <style name="edit_delete_share_fontIcons" parent="event_creator_fontIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+    </style>
+
+    <style name="edit_delete_share_textViews" parent="item_dateText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">@dimen/_4sdp</item>
+    </style>
+
+    <style name="edit_delete_share_layout">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/simple_view_selector</item>
+        <item name="android:padding">@dimen/_4sdp</item>
+    </style>
+
+    <style name="event_detail_titleTextViews" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical|end</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+        <item name="android:padding">@dimen/_1sdp</item>
+<!--        <item name="layout_constraintEnd_toEndOf">@+id/eventTitleTxv</item>-->
+    </style>
+
+    <style name="event_detail_contentTextViews" parent="event_detail_titleTextViews">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="dialog_text_header" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/deep_blue</item>
+        <item name="android:paddingRight">@dimen/_20sdp</item>
+        <item name="paddingEnd">@dimen/_20sdp</item>
+        <item name="android:paddingTop">@dimen/_6sdp</item>
+        <item name="contentPaddingBottom">@dimen/_6sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+<!--        <item name="layout_constraintTop_toTopOf">parent</item>-->
+<!--        <item name="layout_constraintStart_toStartOf">parent</item>-->
+<!--        <item name="layout_constraintEnd_toEndOf">parent</item>-->
+    </style>
+
+    <style name="dialog_buttons" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:layout_marginTop">@dimen/_16sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item>
+    </style>
+
+</resources>

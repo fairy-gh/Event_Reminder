@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/deep_blue"
+    android:gravity="center_vertical|end">
+
+    <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+        android:id="@+id/toolbarTitleTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_14sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        tools:text="یادآوری"/>
+
+    <ImageView
+        android:id="@+id/backImg"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:src="@drawable/arrow_forward"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="@dimen/_14sdp"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/back_to_previous_fragment" />
+
+</LinearLayout>
+

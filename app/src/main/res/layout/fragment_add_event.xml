@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/addEvent"
+    tools:context=".event.ui.eventcreate.AddEventFragment">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/storeAndCancelBtnLay"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+            <com.fereshte.event_reminder.util.view.customEditText.IranSansMediumEditText
+                android:id="@+id/eventTitleEdt"
+                style="@style/event_creator_editText"
+                android:hint="@string/title"
+                android:maxLength="40"
+                app:layout_constraintEnd_toStartOf="@+id/calendarIconTxv"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/titleAddIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_title"
+                app:layout_constraintBottom_toBottomOf="@+id/eventTitleEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/eventTitleEdt" />
+
+            <LinearLayout
+                android:id="@+id/eventTimeDateLay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/event_creator_layout_views_selector"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/eventTitleEdt"
+                app:layout_constraintStart_toStartOf="@+id/eventTitleEdt"
+                app:layout_constraintTop_toBottomOf="@+id/eventTitleEdt">
+
+                <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+                    android:id="@+id/eventTimeTxv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:inputType="time"
+                    tools:text="11:45"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp" />
+
+                <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+                    android:id="@+id/eventDateTxv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|start"
+                    tools:text="۱۱ اردیبهشت ۱۴۰۰"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp"
+                    tools:ignore="RelativeOverlap" />
+
+            </LinearLayout>
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/calendarIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_calendar"
+                app:layout_constraintBottom_toBottomOf="@id/eventTimeDateLay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/eventTimeDateLay" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+                android:id="@+id/eventOccasionTxv"
+                style="@style/event_creator_textView"
+                android:background="@drawable/event_creator_layout_views_selector"
+                android:hint="@string/occasion"
+                android:clickable="true"
+                app:layout_constraintEnd_toStartOf="@+id/occasionIconTxv"
+                app:layout_constraintTop_toBottomOf="@+id/eventTimeDateLay" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/occasionIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_gift"
+                app:layout_constraintBottom_toBottomOf="@+id/eventOccasionTxv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/eventOccasionTxv" />
+
+            <com.fereshte.event_reminder.util.view.customEditText.IranSansMediumEditText
+                android:id="@+id/eventDescriptionEdt"
+                style="@style/event_creator_editText"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:maxLines="50"
+                app:layout_constraintEnd_toStartOf="@+id/descriptionIconTxv"
+                app:layout_constraintTop_toBottomOf="@+id/eventOccasionTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/descriptionIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_note"
+                app:layout_constraintBottom_toBottomOf="@+id/eventDescriptionEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/eventDescriptionEdt" />
+
+            <LinearLayout
+                android:id="@+id/btnGroupLay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:gravity="center_vertical|end"
+                android:weightSum="3"
+                app:layout_constraintEnd_toEndOf="@+id/eventTitleEdt"
+                app:layout_constraintStart_toStartOf="@id/eventTitleEdt"
+                app:layout_constraintTop_toBottomOf="@+id/eventLinkEdt">
+
+                <com.fereshte.event_reminder.util.view.customradiobutton.IranSansRegularButton
+                    android:id="@+id/eventLinkBtn"
+                    style="@style/event_creator_buttonGroup"
+                    android:text="@string/link"/>
+
+                <com.fereshte.event_reminder.util.view.customradiobutton.IranSansRegularButton
+                    android:id="@+id/eventLocationBtn"
+                    style="@style/event_creator_buttonGroup"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="@string/location" />
+
+                <com.fereshte.event_reminder.util.view.customradiobutton.IranSansRegularButton
+                    android:id="@+id/eventDescriptionBtn"
+                    style="@style/event_creator_buttonGroup"
+                    android:text="@string/description"
+                    android:maxLines="100"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/colorPaletteRg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical|end"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/eventTitleEdt"
+                app:layout_constraintStart_toStartOf="@id/eventTitleEdt"
+                app:layout_constraintTop_toBottomOf="@+id/btnGroupLay">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/colorPaletteBlueRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/colorPaletteYellowRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/colorPaletteGreenRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/colorPaletteRedRb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/descriptionAndIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="eventDescriptionEdt, descriptionIconTxv" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/locationAndIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="eventLocationEdt, locationIconTxv" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/linkAndIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="eventLinkEdt, linkIconTxv" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/buttonsGroupAndPlusIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="btnGroupLay, plusIconTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/locationIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_note"
+                app:layout_constraintBottom_toBottomOf="@+id/eventLocationEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/eventLocationEdt" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/linkIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_note"
+                app:layout_constraintBottom_toBottomOf="@+id/eventLinkEdt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/eventLinkEdt" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/plusIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_plus"
+                app:layout_constraintBottom_toBottomOf="@+id/btnGroupLay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnGroupLay" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/colorIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_drop"
+                android:textColor="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/colorPaletteRg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/colorPaletteRg" />
+
+            <com.fereshte.event_reminder.util.view.customEditText.IranSansMediumEditText
+                android:id="@+id/eventLocationEdt"
+                style="@style/event_creator_editText"
+                android:hint="@string/location"
+                android:maxLines="2"
+                app:layout_constraintEnd_toStartOf="@+id/locationIconTxv"
+                app:layout_constraintTop_toBottomOf="@+id/eventDescriptionEdt"/>
+
+            <com.fereshte.event_reminder.util.view.customEditText.IranSansMediumEditText
+                android:id="@+id/eventLinkEdt"
+                style="@style/event_creator_editText"
+                android:hint="@string/link"
+                android:maxLines="2"
+                app:layout_constraintEnd_toStartOf="@id/linkIconTxv"
+                app:layout_constraintTop_toBottomOf="@+id/eventLocationEdt"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/storeAndCancelBtnLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical|end"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:weightSum="2">
+
+        <com.fereshte.event_reminder.util.view.customradiobutton.IranSansRegularButton
+            android:id="@+id/storeEventInDbBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:padding="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:stateListAnimator="@null"
+            android:background="@drawable/default_selected_button"
+            android:text="@string/store"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <com.fereshte.event_reminder.util.view.customradiobutton.IranSansRegularButton
+            android:id="@+id/cancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:padding="@dimen/_4sdp"
+            android:stateListAnimator="@null"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:text="@string/cancel"
+            android:textColor="@color/deep_blue"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

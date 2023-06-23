@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".event.ui.eventdetail.EventDetailFragment">
+
+    <include android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        layout="@layout/toolbar"
+        android:layout_alignParentTop="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/separatorLine"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_6sdp">
+
+            <ImageView
+                android:id="@+id/eventColorIv"
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:background="@drawable/event_list_color_shape"
+                app:layout_constraintEnd_toEndOf="@+id/calendarIconTxv"
+                app:layout_constraintStart_toStartOf="@+id/calendarIconTxv"
+                app:layout_constraintTop_toTopOf="@+id/eventTitleTxv"
+                app:layout_constraintBottom_toBottomOf="@+id/eventTitleTxv"
+                android:contentDescription="@string/color_as_event_sign"/>
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+                android:id="@+id/eventTitleTxv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eventTitle"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_14ssp"
+                android:maxLength="40"
+                android:maxLines="1"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintEnd_toStartOf="@id/eventColorIv"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/calendarIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_title"
+                app:layout_constraintBottom_toBottomOf="@+id/DateTxv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/DateTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+                android:id="@+id/DateTxv"
+                style="@style/event_detail_titleTextViews"
+                android:text="@string/startDate"
+                app:layout_constraintTop_toBottomOf="@id/eventTitleTxv"
+                app:layout_constraintEnd_toEndOf="@id/eventTitleTxv"/>
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansRegularTextView
+                android:id="@+id/eventDateTxv"
+                style="@style/event_detail_contentTextViews"
+                tools:text="۱۱ اردیبهشت ۱۴۰۰"
+                android:layout_marginRight="@dimen/_24sdp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/DateTxv"
+                app:layout_constraintEnd_toStartOf="@id/DateTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansRegularTextView
+                android:id="@+id/eventTimeTxv"
+                style="@style/event_detail_contentTextViews"
+                android:inputType="time"
+                tools:text="11:45"
+                android:layout_marginRight="@dimen/_30sdp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/DateTxv"
+                app:layout_constraintEnd_toStartOf="@+id/eventDateTxv"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/occasionIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_title"
+                android:layout_marginRight="@dimen/_18sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/occasionTxv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/occasionTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+                android:id="@+id/occasionTxv"
+                style="@style/event_detail_titleTextViews"
+                android:text="@string/occasion"
+                app:layout_constraintTop_toBottomOf="@id/DateTxv"
+                app:layout_constraintEnd_toEndOf="@id/eventTitleTxv"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/detailOccasionGp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="occasionTxv, occasionIconTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansRegularTextView
+                android:id="@+id/eventOccasionTxv"
+                style="@style/event_detail_contentTextViews"
+                app:layout_constraintBaseline_toBaselineOf="@+id/occasionTxv"
+                app:layout_constraintEnd_toEndOf="@+id/eventDateTxv"
+                tools:text="تولد" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/notIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_note"
+                android:layout_marginRight="@dimen/_18sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/descriptionTxv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/descriptionTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+                android:id="@+id/descriptionTxv"
+                style="@style/event_detail_titleTextViews"
+                android:text="@string/description"
+                app:layout_constraintTop_toBottomOf="@id/occasionTxv"
+                app:layout_constraintEnd_toEndOf="@id/eventTitleTxv"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/detailDescriptionGp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="descriptionTxv, notIconTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansRegularTextView
+                android:id="@+id/eventDescriptionTxv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/event_detail_contentTextViews"
+                android:maxLines="50"
+                app:layout_constraintBaseline_toBaselineOf="@+id/descriptionTxv"
+                app:layout_constraintEnd_toEndOf="@+id/eventDateTxv"
+                app:layout_constraintStart_toStartOf="@+id/eventTimeTxv"
+                tools:text="توضیحات" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/locationIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_location"
+                android:layout_marginRight="@dimen/_18sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/locationTxv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/locationTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+                android:id="@+id/locationTxv"
+                style="@style/event_detail_titleTextViews"
+                android:text="@string/location"
+                app:layout_constraintTop_toBottomOf="@id/eventDescriptionTxv"
+                app:layout_constraintEnd_toEndOf="@id/eventTitleTxv"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/detailLocationGp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="locationTxv, locationIconTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansRegularTextView
+                android:id="@+id/eventLocationTxv"
+                style="@style/event_detail_contentTextViews"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                app:layout_constraintBaseline_toBaselineOf="@+id/locationTxv"
+                app:layout_constraintEnd_toEndOf="@+id/eventDateTxv"
+                app:layout_constraintStart_toStartOf="@+id/eventDescriptionTxv"
+                tools:text="مکان" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+                android:id="@+id/linkIconTxv"
+                style="@style/event_creator_fontIcon"
+                android:text="@string/icon_link"
+                android:layout_marginRight="@dimen/_18sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/linkTxv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linkTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+                android:id="@+id/linkTxv"
+                style="@style/event_detail_titleTextViews"
+                android:text="@string/link"
+                app:layout_constraintTop_toBottomOf="@id/eventLocationTxv"
+                app:layout_constraintEnd_toEndOf="@id/eventTitleTxv"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/detailLinkGp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="linkTxv, linkIconTxv" />
+
+            <com.fereshte.event_reminder.util.view.customTextView.IranSansRegularTextView
+                android:id="@+id/eventLinkTxv"
+                style="@style/event_detail_contentTextViews"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                app:layout_constraintBaseline_toBaselineOf="@+id/linkTxv"
+                app:layout_constraintEnd_toEndOf="@+id/eventDateTxv"
+                app:layout_constraintStart_toStartOf="@+id/eventLocationTxv"
+                tools:text="لینک" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/separatorLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/light_gray"
+        android:layout_above="@+id/bottomBtns"/>
+
+    <include
+        android:id="@+id/bottomBtns"
+        layout="@layout/edit_delete_share_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

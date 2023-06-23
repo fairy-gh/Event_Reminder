@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="item_occasion">&#xf274;</string>
+    <string name="icon_title">&#xf038;</string>
+    <string name="icon_calendar">&#xf073;</string>
+    <string name="icon_gift">&#xf06b;</string>
+    <string name="icon_plus">&#xf055;</string>
+    <string name="icon_drop">&#xf043;</string>
+    <string name="icon_note">&#xf249;</string>
+    <string name="icon_location">&#xf041;</string>
+    <string name="icon_link">&#x1f517;</string>
+    <string name="icon_arrow">&#x2192;</string>
+    <string name="icon_pen">&#xf14b;</string>
+    <string name="icon_bin">&#xf1f8;</string>
+    <string name="icon_share">&#xf1e0;</string>
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+        android:id="@+id/dialogTitleTxv"
+        style="@style/dialog_text_header"
+        android:text="@string/occasion"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:stateListAnimator="@null"/>
+
+    <RadioGroup
+        android:id="@+id/occasionsRg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTitleTxv">
+
+        <com.fereshte.event_reminder.util.view.custombutton.IranSansRegularRadioButton
+            android:id="@+id/birthDayRb"
+            style="@style/dialog_occasions_radioButtons"
+            android:text="@string/birthday"
+            app:buttonCompat ="@null"/>
+
+        <com.fereshte.event_reminder.util.view.custombutton.IranSansRegularRadioButton
+            android:id="@+id/instalmentRb"
+            style="@style/dialog_occasions_radioButtons"
+            android:text="@string/instalment"
+            app:buttonCompat = "@null"/>
+
+        <com.fereshte.event_reminder.util.view.custombutton.IranSansRegularRadioButton
+            android:id="@+id/anniversaryRb"
+            style="@style/dialog_occasions_radioButtons"
+            android:text="@string/anniversary"
+            app:buttonCompat = "@null"/>
+
+        <com.fereshte.event_reminder.util.view.custombutton.IranSansRegularRadioButton
+            android:id="@+id/gymRb"
+            style="@style/dialog_occasions_radioButtons"
+            android:text="@string/gym"
+            app:buttonCompat = "@null"/>
+
+        <com.fereshte.event_reminder.util.view.custombutton.IranSansRegularRadioButton
+            android:id="@+id/meetingRb"
+            style="@style/dialog_occasions_radioButtons"
+            android:text="@string/meeting"
+            app:buttonCompat = "@null"/>
+
+        <com.fereshte.event_reminder.util.view.custombutton.IranSansRegularRadioButton
+            android:id="@+id/drugRb"
+            style="@style/dialog_occasions_radioButtons"
+            android:text="@string/drug"
+            app:buttonCompat = "@null"/>
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

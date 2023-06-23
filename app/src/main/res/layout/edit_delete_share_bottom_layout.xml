@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/shareLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/edit_delete_share_layout">
+
+        <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+            android:id="@+id/shareIcoTxv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/edit_delete_share_fontIcons"
+            android:text="@string/icon_share"/>
+
+        <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+            android:id="@+id/shareTxv"
+            style="@style/edit_delete_share_textViews"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/share"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deleteLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/edit_delete_share_layout">
+
+        <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+            android:id="@+id/binIcoTxv"
+            style="@style/edit_delete_share_fontIcons"
+            android:text="@string/icon_bin"/>
+
+        <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+            android:id="@+id/deleteTxv"
+            style="@style/edit_delete_share_textViews"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/delete"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/edit_delete_share_layout">
+
+        <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+            android:id="@+id/penIcoTxv"
+            style="@style/edit_delete_share_fontIcons"
+            android:text="@string/icon_pen"/>
+
+        <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+            android:id="@+id/editTxv"
+            style="@style/edit_delete_share_textViews"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/edit"/>
+
+    </LinearLayout>
+
+</LinearLayout>

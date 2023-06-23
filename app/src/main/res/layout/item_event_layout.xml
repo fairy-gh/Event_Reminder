@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/simple_view_selector">
+
+    <ImageView
+        android:id="@+id/eventColorIv"
+        android:layout_width="@dimen/_4sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginLeft="@dimen/_18sdp"
+        android:layout_marginRight="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/event_list_color_shape"
+        android:contentDescription="@string/color_as_event_sign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+        android:id="@+id/eventTitleTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eventTitle"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:maxLength="40"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/eventColorIv"
+        app:layout_constraintEnd_toStartOf="@id/eventColorIv"
+        app:layout_constraintTop_toTopOf="@id/eventColorIv"/>
+
+    <com.fereshte.event_reminder.util.view.customTextView.IranSansRegularTextView
+        android:id="@+id/eventDayOfWeekTxv"
+        style="@style/item_dateText"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:text="@string/eventDay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/eventTitleTxv"
+        app:layout_constraintTop_toBottomOf="@id/eventTitleTxv" />
+
+    <com.fereshte.event_reminder.util.view.customTextView.IconTextView
+        android:id="@+id/iconEventIcoTxv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_occasion"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@id/eventTitleTxv"
+        app:layout_constraintStart_toStartOf="@id/eventTimeTxv"
+        app:layout_constraintTop_toTopOf="@id/eventTitleTxv"/>
+
+    <com.fereshte.event_reminder.util.view.customTextView.IranSansMediumTextView
+        android:id="@+id/eventTimeTxv"
+        style="@style/item_dateText"
+        android:inputType="time"
+        android:text="@string/eventTime"
+        android:layout_marginLeft="@dimen/_30sdp"
+        app:layout_constraintBottom_toBottomOf="@id/eventDayOfWeekTxv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/eventDayOfWeekTxv"
+        tools:ignore="TextViewEdits" />
+
+    <View
+        android:id="@+id/dividerLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_margin="0dp"
+        android:background="@color/light_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
